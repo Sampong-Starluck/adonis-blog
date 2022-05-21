@@ -20,6 +20,17 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
+// Route.get('/', async () => {
+//   return { hello: 'world' }
+// })
+
+Route.group(() => {
+  Route.group(() => {
+    Route.post('/register', 'UsersController.register').as('register')
+    Route.post('/login', 'UsersController.login').as('login')
+    Route.post('/logout', 'UsersController.logout').as('logout')
+  })
+  Route.resource('posts', 'PostsController').as('posts').apiOnly()
 })
+  .prefix('/api/v1')
+  .as('api')

@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Models",
+    "\\database",
+    "\\database\\migrations",
+    "\\start"
+  ],
+  "SelectedNode": "\\app\\Models\\User.ts",
+  "PreviewInSolutionExplorer": false
+}
